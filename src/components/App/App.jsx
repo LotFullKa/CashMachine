@@ -10,11 +10,16 @@ function App() {
         <div className={style.App}>
             <div>
                 <div className={cx('split', 'left')}>
-                    <MenuList/>
+                    <div className={cx('split', 'up')}>
+                        Im left up
+                    </div>
+                    <div className={cx('split', 'down')}>
+                        Im left down
+                    </div>
                 </div>
 
                 <div className={cx('split', 'right')}>
-                    Im right
+                    Order Deque here
                 </div>
             </div>
         </div>
