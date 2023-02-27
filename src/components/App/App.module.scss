@@ -1,0 +1,40 @@
+.App {
+  margin: 10px;
+}
+
+.redButton {
+  background-color: red;
+  color:white;
+  font-size: larger;
+  height: 100px;
+  width: 400px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+}
+
+.split {
+  height: 96%;
+  width: 48%;
+  position: fixed;
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: white;
+
+  &.left {
+    border: 1px solid green;
+    padding: 10px;
+    left: 0;
+  }
+  
+  &.right {
+    border: 1px solid green;
+    padding: 10px;
+    right: 0;
+  }
+}
