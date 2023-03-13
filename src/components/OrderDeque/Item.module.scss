@@ -1,0 +1,30 @@
+.item{
+    // shape
+    border: 3px solid red;
+    width: 100%;
+    min-height: 40px;
+    border-radius: 15px;
+
+    // text
+    padding-top: 20px;
+    background-color: white;
+    color: black;
+    
+}
+
+.button{
+    // shape
+    border: 3px solid red;
+    width: 100%;
+    min-height: 60px;
+    border-radius: 15px;
+
+    // text
+    background-color: white;
+    color: black;
+}
+
+.remove{
+    height: 13px;
+    right: 0px;
+}
