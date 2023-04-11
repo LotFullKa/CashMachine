@@ -15,6 +15,7 @@ export function OrderDeque() {
     
     const appendItem = () => {
         setOrderDeque([...orderDeque, {id: idGenerator, text:'salt'}])
+        // window.open()
     }
 
     useEffect(() => {
