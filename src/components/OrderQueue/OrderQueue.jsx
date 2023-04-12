@@ -12,8 +12,13 @@ export function OrderQueue() {
     const dispatch = useDispatch()
 
     
-    const appendItem = () => dispatch(addOrder({text:'sugar with milk'}))
+    const appendItem = () => dispatch(
+        addOrder({
+        name: 'Красная кепка',
+        text:'sugar with milk'
+    }))
 
+    
 
     return (
         <div className={style.orders}>
@@ -21,7 +26,7 @@ export function OrderQueue() {
                             <Item 
                             key={index}
                             id={item.id}
-                            text={item.text} 
+                            order={orders.filter(it => it.id === item.id)} 
                             />
                             )}
 

@@ -1,6 +1,5 @@
 import style from './App.module.scss'
 import classnames from 'classnames/bind'
-import { MenuList } from '../ menuList/MenuList';
 import { OrderQueue } from '../OrderQueue/OrderQueue';
 
 const cx = classnames.bind(style)

@@ -13,13 +13,21 @@ const orderQueueSlice = createSlice({
             state.orders.push({
                 id: new Date().toISOString(),
                 text: action.payload.text,
+                payed: false,
+                order_list: [],
             })
         },
         closeOrder(state, action) {
             console.log("action: ", action)
+           
+            state.orders = state.orders.filter(item => item.id !== action.payload.id)
+            
         },
+
+
         rejectOrder(state, action) {
             console.log("action: ", action)
+            state.orders = state.orders.filter(item => item.id !== action.payload.id)
         }
     }
 })
