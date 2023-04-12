@@ -1,38 +1,31 @@
 import React, { useEffect, useState } from "react";
-import style from "./OrderDeque.module.scss"
-import { Item } from "./Item";
-import { AddItem } from "./Item";
+import style from "./OrderQueue.module.scss"
+import { Item } from "./OrderItem";
+import { AddItem } from "./OrderItem";
+import { useDispatch, useSelector } from "react-redux";
 
-export function OrderDeque() {
-    const [orderDeque, setOrderDeque] = useState([])
-    const [idGenerator, inc] = useState(orderDeque.length + 1)
+import {addOrder} from '../../store/orderQueue/orderQueueSlice'
 
-    const removeById = (id) => {
-        setOrderDeque(
-            (prev) => (prev.filter(item => item.id !== id))
-        )
-    }
+export function OrderQueue() {
     
-    const appendItem = () => {
-        setOrderDeque([...orderDeque, {id: idGenerator, text:'salt'}])
-        // window.open()
-    }
+    const orders = useSelector(state => state.orders.orders)
+    const dispatch = useDispatch()
 
-    useEffect(() => {
-        inc(orderDeque.length + 1)
-    }, [orderDeque])
     
+    const appendItem = () => dispatch(addOrder({text:'sugar with milk'}))
+
+
     return (
         <div className={style.orders}>
-        {orderDeque.map((item, index) => 
+        {orders.map((item, index) => 
                             <Item 
                             key={index}
                             id={item.id}
                             text={item.text} 
-                            removeById={removeById}/>
+                            />
                             )}
 
-        <AddItem append={appendItem} /> 
+        <button className={style.button} onClick={appendItem}> add new order </button>
         </div>
     )
 }

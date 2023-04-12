@@ -1,14 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 
-export const orderQueueSlice = createSlice({
+const orderQueueSlice = createSlice({
     name: 'orderQueueStore',
     initialState: {
-        orders = []
+        orders: []
     },
     reducers: {
         addOrder(state, action) {
-            console.log("state: ", state)
             console.log("action: ", action)
 
             state.orders.push({
@@ -17,14 +16,14 @@ export const orderQueueSlice = createSlice({
             })
         },
         closeOrder(state, action) {
-
+            console.log("action: ", action)
         },
         rejectOrder(state, action) {
-
+            console.log("action: ", action)
         }
     }
 })
 
-export const {} = orderQueueSlice.actions;
+export const {addOrder, closeOrder, rejectOrder} = orderQueueSlice.actions;
 
 export default orderQueueSlice.reducer
