@@ -1,0 +1,21 @@
+.item{
+    // shape
+    border: 3px solid red;
+    width: 100%;
+    min-height: 40px;
+    border-radius: 15px;
+
+    // text
+    padding-top: 20px;
+    background-color: white;
+    color: black;
+    
+}
+
+
+
+.remove{
+    position: fixed;
+    height: 13px;
+    right: 20px;
+}
