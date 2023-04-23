@@ -14,9 +14,8 @@ export function Item({id, order}) {
     const [payded, setPayded] = useState(false)
     
     // temp consts
-    const price_value = 2
-    const order_name = 'Красная кепка'
-    useSelector(state => state.orders.orders)
+    const price_value = order.price
+    const order_name = order.name
 
     const dispatch = useDispatch()
 

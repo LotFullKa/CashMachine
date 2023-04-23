@@ -12,9 +12,11 @@ const orderQueueSlice = createSlice({
 
             state.orders.push({
                 id: new Date().toISOString(),
+                name: action.payload.name,
                 text: action.payload.text,
+                price: action.payload.price,
                 payed: false,
-                order_list: [],
+                order_list: action.payload.order_list,
             })
         },
         closeOrder(state, action) {

@@ -12,11 +12,10 @@ export function OrderQueue() {
     const dispatch = useDispatch()
 
     
-    const appendItem = () => dispatch(
-        addOrder({
-        name: 'Красная кепка',
-        text:'sugar with milk'
-    }))
+    const appendItem = () => {
+        const orderWin = window.open('/order_item')
+        // orderWin.addEventListener('beforeunload', (event) => {window.location.reload()})
+    }
 
     
 
