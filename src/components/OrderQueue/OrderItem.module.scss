@@ -1,21 +1,50 @@
 .item{
     // shape
     border: 3px solid red;
-    width: 100%;
-    min-height: 40px;
+    width: 48%;
+    min-height: 100px;
     border-radius: 15px;
+    position:   relative;
 
     // text
-    padding-top: 20px;
+    
     background-color: white;
     color: black;
+
+    display: inline-block
     
 }
 
-
-
-.remove{
-    position: fixed;
-    height: 13px;
-    right: 20px;
+.name{
+    font-size: 20px;
+    border-bottom: 2px solid black;
 }
+
+.buttons{
+    float: right;
+    border: 3px solid black;
+    width: 30%;
+    height: 100%;
+}
+
+.button{
+    padding: 3px;
+}
+
+.price{
+    &.payded{
+        border: 3px solid green;
+        color:green
+    }
+
+    &.not_payded{
+        color: black;
+    }
+}
+
+.order_list{
+    overflow-wrap: break-word;
+    width: 65%;
+}
+
+

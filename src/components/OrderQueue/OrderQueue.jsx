@@ -12,8 +12,12 @@ export function OrderQueue() {
     const dispatch = useDispatch()
 
     
-    const appendItem = () => dispatch(addOrder({text:'sugar with milk'}))
+    const appendItem = () => {
+        const orderWin = window.open('/order_item', 'mywin','width=1200, height=800')
+        orderWin.addEventListener('beforeunload', (event) => {window.location.reload()})
+    }
 
+    
 
     return (
         <div className={style.orders}>
@@ -21,7 +25,7 @@ export function OrderQueue() {
                             <Item 
                             key={index}
                             id={item.id}
-                            text={item.text} 
+                            order={orders.filter(it => it.id === item.id)} 
                             />
                             )}
 
