@@ -13,8 +13,8 @@ export function OrderQueue() {
 
     
     const appendItem = () => {
-        const orderWin = window.open('/order_item')
-        // orderWin.addEventListener('beforeunload', (event) => {window.location.reload()})
+        const orderWin = window.open('/order_item', 'mywin','width=1200, height=800')
+        orderWin.addEventListener('beforeunload', (event) => {window.location.reload()})
     }
 
     

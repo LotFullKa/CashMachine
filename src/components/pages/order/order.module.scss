@@ -1,13 +1,75 @@
-.orderName {
+
+.head {
+    // background-color: whitesmoke;
+    display: inline-block;
+}
+
+.price {
+    display: inline-block;
     text-align: center;
     font-size:xx-large;
     padding: 5px;
     background-color: whitesmoke;
+    border-radius: 8px;
+    margin: 5px;
+    height: 39px;
+}
+
+.orderName {
+    text-align: center;
+    font-size: xx-large;
+    padding: 5px;
+    padding-left: 50px;
+    background-color: whitesmoke;
     border-radius: 10px;
+    display: inline-block;
 }
 
 .textarea {
     border: 0 solid black;
     font-size: xx-large;
-    // height: 10px;   
+    display: inline-block; 
 }
+
+.buttons {
+    position: fixed;
+    bottom: 4%;
+}
+
+.button {
+    border-radius: 10px;
+    height: 60px;
+    width: 182px;
+    font-size: larger;
+}
+
+.split {
+    $left_col_wifht: 30%;
+  
+    height: 88%;
+    position: fixed;
+    color: white;
+    border: 1px solid green;
+    margin: 10px;
+    padding: 10px;
+
+    &.left {
+      width: $left_col_wifht;
+      overflow-x: hidden;
+      
+      left: 0;
+    }
+    
+    &.right {
+      width: (94 - $left_col_wifht);
+      overflow-y: scroll;
+      
+      right: 0;
+
+    }
+}
+
+.addClass {
+    width :100%;
+}
+

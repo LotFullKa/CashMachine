@@ -14,11 +14,3 @@ export function Item({text}) {
         </div>
     )
 }
-
-export function ItemWindow() {
-    return(
-        <div>
-            
-        </div>
-    )
-}
