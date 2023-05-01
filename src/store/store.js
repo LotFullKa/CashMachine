@@ -1,5 +1,6 @@
-import { combineReducers, configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import orderReducer from "./orderQueue/orderQueueSlice";
+import menuReducer from "./Menu/menuSlice"
 
 import { persistStore, 
          persistReducer,
@@ -17,6 +18,7 @@ const presistConfig = {
 }
 const rootReducer = combineReducers({
     orders: orderReducer,
+    menu: menuReducer,
 })
 
 const persistedReducer = persistReducer(presistConfig, rootReducer); 
