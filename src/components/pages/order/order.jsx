@@ -1,10 +1,11 @@
-import style from './order.module.scss'
+import style from './order.module.scss';
 import React, { useEffect, useState } from "react";
-import classnames from 'classnames/bind'
+import classnames from 'classnames/bind';
 import { useDispatch, useSelector } from "react-redux";
-import {addOrder} from '../../../store/orderQueue/orderQueueSlice'
+import {addOrder} from '../../../store/orderQueue/orderQueueSlice';
 import Modal from './modal_wind';
-import MenuItem from './muneItem'
+import MenuItem from './muneItem';
+import OrderItem from './orderItem';
 import { addItem } from '../../../store/Menu/menuSlice';
 
 const cx = classnames.bind(style)
@@ -82,7 +83,13 @@ export function Order() {
                 </label>
             </div>
             <div className={cx('split', 'left')}>
-                now order
+
+                {orderList.map((val)=> <OrderItem name={val.name} price={val.price} />)}
+
+                <div className={style.commentBlock}>
+                    Комментарий:
+                    <textarea className={style.comment} value={comment} onChange={(e) => setComment(e.target.value)}/>
+                </div>
                 <div className={style.buttons}>
                     <button className={style.button} onClick={reject}> отмена </button>
                     <button className={style.button} onClick={createOrder}> создать </button>

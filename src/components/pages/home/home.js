@@ -13,7 +13,6 @@ export function Home() {
             </div>
 
             <div className={cx('split', 'right')}>
-                Order Queue here
                 <OrderQueue/>
             </div>
         </div>
