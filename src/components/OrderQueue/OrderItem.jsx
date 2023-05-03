@@ -34,6 +34,11 @@ export function Item({id, order}) {
     return ( 
         <div className={style.item}>
             <div className={style.name}>{order_name}</div>
+            {/* body */}
+            <div className={style.orderlist}>
+                комментарий: {order.text}
+                {order.order_list.map(v => <li>{v.name}</li>)}
+            </div>
             <div className={style.buttons}>
                 {/* price */}
                 <div className={payded ? cx('price', 'payded'): cx('price', 'not_payded', 'button')} 

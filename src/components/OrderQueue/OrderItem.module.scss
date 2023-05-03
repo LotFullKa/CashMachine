@@ -27,6 +27,12 @@
     height: 100%;
 }
 
+.orderlist{
+    display: inline-block;
+    width: 65%;
+    overflow-y: hidden;
+}
+
 .button{
     padding: 3px;
 }
@@ -42,9 +48,6 @@
     }
 }
 
-.order_list{
-    overflow-wrap: break-word;
-    width: 65%;
-}
+
 
 
