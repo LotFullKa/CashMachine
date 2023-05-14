@@ -49,5 +49,28 @@
       height: 75%;
     }
   }
+
+  .header {
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 20px;
+    height: 30px;
+  }
+
+  .cash {
+    display: inline-block;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: 2px solid green;
+
+  }
+
+  .button {
+    display: inline-block;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 5px;
+  }
   
   

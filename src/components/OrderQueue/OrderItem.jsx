@@ -4,6 +4,7 @@ import { OrderList } from "./OrderList";
 
 import { useDispatch, useSelector } from "react-redux";
 import { rejectOrder, closeOrder } from '../../store/orderQueue/orderQueueSlice'
+import { plus } from "../../store/GlobalCash/globalCashSlice";
 import classnames from 'classnames/bind'
 
 const cx = classnames.bind(style)
@@ -26,6 +27,9 @@ export function Item({id, order}) {
     const close = () => {
         if (payded) {
             dispatch(
+                plus({sum:price_value})
+            )
+            dispatch(
                 closeOrder({id:id})
             )
         }
@@ -36,7 +40,8 @@ export function Item({id, order}) {
             <div className={style.name}>{order_name}</div>
             {/* body */}
             <div className={style.orderlist}>
-                комментарий: {order.text}
+                комментарий: {order.text}<br/>
+                ----------------------------
                 {order.order_list.map(v => <li>{v.name}</li>)}
             </div>
             <div className={style.buttons}>
@@ -54,9 +59,6 @@ export function Item({id, order}) {
                     отменить
                 </div>
             </div> 
-            <div className={style.order_list}> 
-                    {/* <OrderList id={id}/>*/}
-            </div>
         </div>
     )
 }

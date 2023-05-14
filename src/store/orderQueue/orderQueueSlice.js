@@ -26,14 +26,18 @@ const orderQueueSlice = createSlice({
             
         },
 
-
         rejectOrder(state, action) {
             console.log("action: ", action)
             state.orders = state.orders.filter(item => item.id !== action.payload.id)
+        },
+
+        resetOrders(state, action) {
+            console.log('action: ', action)
+            state.orders = []
         }
     }
 })
 
-export const {addOrder, closeOrder, rejectOrder} = orderQueueSlice.actions;
+export const {addOrder, closeOrder, rejectOrder, resetOrders} = orderQueueSlice.actions;
 
 export default orderQueueSlice.reducer
