@@ -4,7 +4,9 @@ import { Order } from '../pages/order/order';
 import { Route, Routes,  Navigate } from 'react-router-dom';
 
 function App() {
-   
+    // If you need reset local storage
+    // localStorage.removeItem('persist:root')
+
     return (
         <div className={style.App}>
 

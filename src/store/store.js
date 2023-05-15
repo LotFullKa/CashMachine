@@ -1,6 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import orderReducer from "./orderQueue/orderQueueSlice";
 import menuReducer from "./Menu/menuSlice"
+import globalCashReducer from "./GlobalCash/globalCashSlice"
 
 import { persistStore, 
          persistReducer,
@@ -19,6 +20,7 @@ const presistConfig = {
 const rootReducer = combineReducers({
     orders: orderReducer,
     menu: menuReducer,
+    cash: globalCashReducer
 })
 
 const persistedReducer = persistReducer(presistConfig, rootReducer); 
