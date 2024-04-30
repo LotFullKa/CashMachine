@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "./OrderItem.module.scss"
-import { OrderList } from "./OrderList";
+import { OrderList } from "./OrderList.jsx";
 
 import { useDispatch, useSelector } from "react-redux";
 import { rejectOrder, closeOrder } from '../../store/orderQueue/orderQueueSlice'

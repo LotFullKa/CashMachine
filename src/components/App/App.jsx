@@ -1,6 +1,7 @@
+import React from 'react';
 import style from './App.module.scss';
 import { Home } from '../pages/home/home';
-import { Order } from '../pages/order/order';
+import { Order } from '../pages/order/order.jsx';
 import { Route, Routes,  Navigate } from 'react-router-dom';
 
 function App() {

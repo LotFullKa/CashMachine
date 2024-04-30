@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./OrderQueue.module.scss"
-import { Item } from "./OrderItem";
-import { AddItem } from "./OrderItem";
+import { Item } from "./OrderItem.jsx";
+import { AddItem } from "./OrderItem.jsx";
 import { useDispatch, useSelector } from "react-redux";
 
 import {addOrder} from '../../store/orderQueue/orderQueueSlice'

@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import classnames from 'classnames/bind';
 import { useDispatch, useSelector } from "react-redux";
 import {addOrder} from '../../../store/orderQueue/orderQueueSlice';
-import Modal from './modal_wind';
-import MenuItem from './muneItem';
-import OrderItem from './orderItem';
+import Modal from './modal_wind.jsx';
+import MenuItem from './muneItem.jsx';
+import OrderItem from './orderItem.jsx';
 import { addItem } from '../../../store/Menu/menuSlice';
 
 const cx = classnames.bind(style)

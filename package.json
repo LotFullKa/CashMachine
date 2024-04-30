@@ -1,41 +1,54 @@
 {
-  "name": "cash-machine",
-  "author": "Kamilka",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@reduxjs/toolkit": "^1.9.3",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "classnames": "^2.3.2",
-    "concurrently": "^7.6.0",
-    "electron": "^22.0.0",
-    "electron-builder": "^23.6.0",
-    "electron-is-dev": "^2.0.0",
-    "node-sass": "^7.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^8.0.5",
-    "react-router-dom": "^6.10.0",
-    "react-scripts": "5.0.1",
-    "redux": "^4.2.1",
-    "redux-persist": "^6.0.0",
-    "wait-on": "^7.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "cash_machine",
+  "productName": "cash_machine",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": ".webpack/main/index.js",
   "scripts": {
-    "start": "react-scripts start",
+    "react": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\""
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-react": "^7.24.1",
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron-forge/plugin-webpack": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "@vercel/webpack-asset-relocator-loader": "^1.7.3",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.11.0",
+    "electron": "^30.0.1",
+    "node-loader": "^2.0.0",
+    "style-loader": "^3.3.4"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Lotfullin Kamil",
+    "email": "lotfullin01@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.3",
+    "classnames": "^2.5.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.1.1",
+    "react-router-dom": "^6.23.0",
+    "react-scripts": "^5.0.1",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.75.0"
   },
   "browserslist": {
     "production": [
@@ -48,6 +61,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "main": "public/main.js"
+  }
 }

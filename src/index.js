@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import store, { persistor } from './store/store'
 import './index.css';
-import App from './components/App/App';
+import App from './components/App/App.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 console.log('initialization')

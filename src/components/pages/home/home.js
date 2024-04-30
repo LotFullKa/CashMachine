@@ -1,10 +1,11 @@
+import React from 'react';
 import style from './home.module.scss'
 import classnames from 'classnames/bind'
-import { OrderQueue } from '../../OrderQueue/OrderQueue';
+import { OrderQueue } from '../../OrderQueue/OrderQueue.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { reset } from '../../../store/GlobalCash/globalCashSlice';
 import { resetOrders } from '../../../store/orderQueue/orderQueueSlice';
-import { FastOrders } from '../../FastOrders/fastOrders';
+import { FastOrders } from '../../FastOrders/fastOrders.jsx';
 
 const cx = classnames.bind(style)
 
